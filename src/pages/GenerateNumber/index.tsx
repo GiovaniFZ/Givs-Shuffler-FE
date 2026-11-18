@@ -24,7 +24,7 @@ export function GenerateNumber() {
       path: ['max'],
     })
     .refine((data) => !data.no_repeat || data.max - data.min >= data.count, {
-      message: 'if you want to repeat, max - min should be greater than count!',
+      message: 'if you want to not repeat, max - min should be greater than count!',
       path: ['no_repeat'],
     });
 
